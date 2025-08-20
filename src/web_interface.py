@@ -45,8 +45,8 @@ class WebInterface:
             # Click the submit button
             self.page.click(submit_selector)
             
-            # Wait for response (you might need to adjust the selector and timing)
-            response_selector = ".response-class"  # Adjust based on actual webpage
+            # Wait for response with a more specific selector
+            response_selector = ".message.bot.response-class:last-child"
             self.page.wait_for_selector(response_selector)
             
             # Get the response text

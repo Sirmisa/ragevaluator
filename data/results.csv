@@ -1,0 +1,5 @@
+query,ground_truth,actual_response,cosine_similarity,rouge_l_score,exact_match,token_f1,meteor_score,average_score
+What is the capital of France?,Paris is the capital city of France.,CDMX is the capital city of France.,0.7799154245579976,0.8571428571428571,0.0,0.875,0.8737244897959183,0.6771565542993546
+Who wrote Romeo and Juliet?,William Shakespeare wrote Romeo and Juliet.,William Shakespeare wrote Romeo and Juliet.,1.0000000000000004,1.0,1.0,1.0,0.9985422740524781,0.9997084548104956
+¿Que es una manzana?,Una manzana es una fruta.,Una manzana es una fruta.,1.0000000000000002,1.0,1.0,1.0,0.9976851851851852,0.999537037037037
+¿Que es una pera?,Una pera es una fruta tropical.,Una pera de las familias de las peritas que es una fruta tropical y de las regiones templadas.,0.39943950178236076,0.5,0.0,0.6,0.8200597312095571,0.46389984659838357
