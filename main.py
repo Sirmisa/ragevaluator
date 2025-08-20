@@ -1,6 +1,6 @@
 from src.web_interface import WebInterface
 from src.evaluation_manager import EvaluationManager
-from src.scorers.scorers import CosineScorer, BleuScorer, RougeScorer
+from src.scorers.scorers import CosineScorer, RougeScorer
 import pandas as pd
 import argparse
 from typing import List, Dict
@@ -30,7 +30,7 @@ def main():
 
     # Initialize components
     web_interface = WebInterface(args.url)
-    scorers = [CosineScorer(), BleuScorer(), RougeScorer()]
+    scorers = [CosineScorer(), RougeScorer()]
     evaluator = EvaluationManager(scorers)
 
     try:

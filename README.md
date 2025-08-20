@@ -7,7 +7,6 @@ This tool helps evaluate responses from a RAG (Retrieval-Augmented Generation) s
 - Web automation using Playwright for interacting with RAG system UI
 - Multiple scoring metrics:
   - Cosine Similarity (using TF-IDF)
-  - BLEU Score
   - ROUGE-L Score
 - Modular architecture for easy addition of new scoring methods
 - CSV-based input and output for easy data management
@@ -93,7 +92,7 @@ class MyNewScorer(BaseScorer):
 
 3. Add your scorer to the list in `main.py`:
 ```python
-scorers = [CosineScorer(), BleuScorer(), RougeScorer(), MyNewScorer()]
+scorers = [CosineScorer(), RougeScorer(), MyNewScorer()]
 ```
 
 ## Output Format
@@ -101,7 +100,7 @@ scorers = [CosineScorer(), BleuScorer(), RougeScorer(), MyNewScorer()]
 The tool generates a CSV file with the following columns:
 - Original columns from input file (`query`, `ground_truth`)
 - `actual_response`: The response received from the RAG system
-- Individual score columns (e.g., `cosine_similarity`, `bleu_score`, `rouge_l_score`)
+- Individual score columns (e.g., `cosine_similarity`, `rouge_l_score`)
 - `average_score`: Average of all scoring metrics
 
 ## Contributing
